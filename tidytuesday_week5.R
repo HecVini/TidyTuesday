@@ -8,7 +8,7 @@ library(ggh4x) #for intermediate ticks
 
 week5_url = 'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-02-01'
 
-#raw datasets
+#raw datasets (I had some trouble using the tidytuesdayR package. "Error in parse_url(url) : length(url) == 1 is not TRUE")
 breed_traits.R = read_csv(paste0(week5_url,'/breed_traits.csv')) %>% tibble() %>% clean_names()
 traits_descriptions.R = read_csv(paste0(week5_url,'/trait_description.csv')) %>% tibble() %>% clean_names()
 traits_ranking.R = read_csv(paste0(week5_url,'/breed_rank.csv')) %>% tibble() %>% clean_names()
