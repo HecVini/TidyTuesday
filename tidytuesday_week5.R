@@ -9,7 +9,7 @@ library(ggh4x) #for intermediate ticks
 week5_url = 'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-02-01'
 
 #raw datasets
-breed_traits.R = read_csv(paste0(week5_url,'/breed_traits.csv')) %>% tibble() %>% clean_names()
+breed_traits.R = read_csv(paste0(week5_url,'/breed_traits.csv')) %>% tibble() %>% clean_names() #clean_names() is perfect to rename colnames with upper letters and special characters
 traits_descriptions.R = read_csv(paste0(week5_url,'/trait_description.csv')) %>% tibble() %>% clean_names()
 traits_ranking.R = read_csv(paste0(week5_url,'/breed_rank.csv')) %>% tibble() %>% clean_names()
 
