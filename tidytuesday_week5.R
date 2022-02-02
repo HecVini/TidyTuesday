@@ -57,7 +57,7 @@ chart_dogs_score =
   scale_y_continuous(limits = c(1.5,5), breaks = seq(2,5,1), minor_breaks = seq(2,5,.5), guide = "axis_minor") +
   scale_x_continuous(limits = c(1.5,5), breaks = seq(2,5,1), minor_breaks = seq(2,5,.5), guide = "axis_minor")
 
-#Then, other changes were made with Canvas. 
+#Then, other changes were made on Canva. 
 
 ggsave(filename = 'chart_dogs_score.png',plot = chart_dogs_score, width = 29, height = 29, device = 'png', 
        path = 'set_your_directory') 
