@@ -53,16 +53,9 @@ babynames_biblical = babynames_biblical %>% group_by(year) %>%
   mutate(pct = (n/sum(n))*100) %>% ungroup() #get bilbical percentage
 babynames_biblical = babynames_biblical %>% filter(biblical == 'Y') #filter only biblical names
 
-babynames_biblical %>% filter(year == 2015)
-
 babynames_ranking = babynames %>% group_by(year) %>% mutate(pct = (n/sum(n))*100) %>% ungroup()
-babynames_ranking
 babynames_ranking1950 = babynames_ranking %>% filter(year == 1950) %>% arrange(desc(prop))
-babynames_ranking1950 %>% group_by(biblical) %>% summarise(sum(pct))
 babynames_ranking2015 = babynames_ranking %>% filter(year == 2015) %>% arrange(desc(prop))
-babynames_ranking2015
-View(babynames_ranking2015)
-sum(babynames_ranking2015$prop)
 
 babynames_chart = 
   ggplot(babynames_biblical,aes(x = year,y = pct)) +
